@@ -30,8 +30,8 @@ As a result, of my early signs of dementia, I decided to create a simple discord
 1. **Clone** this repository
 3. **CD** into `SA-Public-Holiday-Notifier`.
 2. **Create** a virutal evironment `sudo python3 -m venv bot-env`.
-3. **Activate** the virtual environment ``
-4. **Install** project dependencies `pip install -r /path/to/requirements.txt`.
+3. **Activate** the virtual environment `source bot-env/bin/activate`.
+4. **Install** project dependencies `pip install -r requirements.txt`.
 5. **SET** the `BOT_TOKEN`  and `CHANNEL_ID` environment variables.
    - Note: On the `ubuntu` distro I used `export`.
    - Note: Make sure you captured the `BOT_TOKEN` and `CHANNEL_ID` from discord bot and app setup phase.
