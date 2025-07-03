@@ -1,32 +1,38 @@
-# SA-Public-Holiday-Notifier
+# SA Public Holiday Notifier
 
-## Reason for creating this
-```py
-"""
-The last time I kept track of public holidays was during my schooling and college years, you know where it really mattered.
+## Reason for Creating This
 
-Unfortunately when I begun working, I started forgetting these important days, to a point where I needed to be reminded by friends and family of them.
+> The last time I kept track of public holidays was during my school and college years — you know, when it really mattered.
+>
+> Unfortunately, once I began working, I started forgetting these important days, to the point where I needed to be reminded by friends and family.
+>
+> So, as an early sign of “calendar amnesia,” I decided to create a simple Discord bot that sends a message to my Discord server whenever today is a public holiday.
 
-As a result, of my early signs of dementia, I decided to create a simple discord bot that sends messages to my discord server, letting me know if today is public holiday or not
-"""
-```
+---
 
-## Dependecies
-1. Currently utilizing the [discord.py](https://discordpy.readthedocs.io/en/stable/) to allow the bot to `send message`. 
-2. You can have a look at the `requirements.txt` found within this directory for the versioning and other dependencies
+## Dependencies
 
-## How to setup the dev environment
+1. Uses [`discord.py`](https://discordpy.readthedocs.io/en/stable/) for sending messages via a Discord bot.
+2. See `requirements.txt` in the project root for exact versions.
 
-### Pre-requistes
-1. You need a `discord` account.
-2. You need to have an understanding on setting up the discord bot and how-to integrate it with your discord servers and channels.
-3. You need to have python installed on your local machine
+---
 
-#### Python and Pip versions
-1. PIP `v22.0.2`
-2. Python3 `v3.10.12`
+## Setting Up the Development Environment
 
-## Steps
+### Prerequisites
+
+1. A [Discord](https://discord.com/) account.
+2. Basic understanding of setting up a Discord bot and adding it to a server.
+3. Python installed on your machine.
+
+#### Tested Versions
+
+- Python: `v3.10.12`
+- pip: `v22.0.2`
+
+---
+
+## 🚀 Setup Steps
 1. **Clone** this repository
 3. **CD** into `SA-Public-Holiday-Notifier`.
 2. **Create** a virutal evironment `sudo python3 -m venv bot-env`.
