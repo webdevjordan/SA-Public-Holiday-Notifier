@@ -1,0 +1,5 @@
+# Ignore venv and secrets
+bot-env/
+.env
+__pycache__/
+*.pyc
