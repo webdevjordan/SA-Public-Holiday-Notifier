@@ -1,4 +1,3 @@
-
 # Import dependencies
 import os
 import discord
@@ -39,7 +38,7 @@ def get_holiday_message():
         message = f"Woohoo!!! Today is {PUBLIC_HOLIDAYS[today]} 🎉"
         day_name = datetime.now().strftime("%A")
         if day_name == "Sunday":
-            message = f"{message}\nReminder that Monday is also a holiday"
+            message = f"{message}\nReminder that Monday is also a holiday."
         return message
 
     return "No holidays for today😞😭"

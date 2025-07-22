@@ -39,7 +39,13 @@
 3. **Activate** the virtual environment `source bot-env/bin/activate`.
 4. **Install** project dependencies `pip install -r requirements.txt`.
 5. **SET** the `BOT_TOKEN`  and `CHANNEL_ID` environment variables.
-   - Note: On the `ubuntu` distro I used `export`.
+   - Note: On the `ubuntu` distro I used `export BOT_TOKEN="your_bot_token"` and `export CHANNEL_ID=your_channel_id`.
    - Note: Make sure you captured the `BOT_TOKEN` and `CHANNEL_ID` from discord bot and app setup phase.
 6. **RUN** the `main.py` script using example command `python3 main.py`.
 7. **Confirm** that you get a message in your discord channel.
+
+---
+
+### Suggested Improvements:
+1. Please feel to create issues on this repo with suggested improvements
+2. I would like to add the cabability of sending SMS notifications in future but for now it's as basic as it gets.
