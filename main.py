@@ -1,6 +1,7 @@
 # Import dependencies
 import os
 import discord
+import time
 from datetime import datetime
 from discord.ext import commands
 
@@ -28,14 +29,26 @@ PUBLIC_HOLIDAYS = {
 }
 
 
-def get_holiday_message():
+#The format to adding a new birtdays entry is as follows
+# "MM-DD" : "Type of holiday"
+IMPORTANT_BIRTHDAYS = {
+    "01-02": "Jordan",
+    "02-24": "Father",
+    "04-06": "Third",
+    "08-05": "Wife and Nummnumm",
+    "11-04": "Mother",
+    "12-10": "Sister",
+    "27-10": "Eli",
+}
+
+
+def get_holiday_message(todays_date):
     """
     Return a message indicating whether today is a public holiday.
     """
 
-    today = datetime.now().strftime('%m-%d')
-    if today in PUBLIC_HOLIDAYS:
-        message = f"Woohoo!!! Today is {PUBLIC_HOLIDAYS[today]} 🎉"
+    if todays_date in PUBLIC_HOLIDAYS:
+        message = f"Woohoo!!! Today is {PUBLIC_HOLIDAYS[todays_date]} 🎉"
         day_name = datetime.now().strftime("%A")
         if day_name == "Sunday":
             message = f"{message}\nReminder that Monday is also a holiday."
@@ -44,10 +57,21 @@ def get_holiday_message():
     return "No holidays for today😞😭"
 
 
+def get_birthday_message(todays_date):
+    """
+    Return a message indicating whether today is an important birthday
+    """
 
-# Send a message to the discord channel using the bot
-message = get_holiday_message()
-if message:
+    if todays_date in IMPORTANT_BIRTHDAYS:
+        return f"It is {IMPORTANT_BIRTHDAYS[todays_date]}'s birthday. Wish them a lovely day🎉"
+
+    return ""
+
+
+def send_message_to_discord(message):
+    """
+    Send a message to the discord channel using the bot
+    """
     intents = discord.Intents.default()
     bot = commands.Bot(command_prefix='!', intents=intents)
 
@@ -59,3 +83,30 @@ if message:
         await bot.close()
 
     bot.run(TOKEN)
+
+
+def main():
+    """
+    Handles all the main operations
+    """
+
+    # Get todays that in "M-D"
+    todays_date = datetime.now().strftime('%m-%d')
+
+
+    # Send out the holiday message
+    holiday_message = get_holiday_message(todays_date)
+    if holiday_message:
+        send_message_to_discord(holiday_message)
+
+    print('sleeping...')
+    time.sleep(20)
+    print('done...')
+
+    # Send out the birthday message
+    birthday_message = get_birthday_message(todays_date)
+    if birthday_message:
+        send_message_to_discord(birthday_message)
+
+
+main()
