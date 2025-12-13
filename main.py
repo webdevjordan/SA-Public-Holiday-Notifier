@@ -23,7 +23,7 @@ PUBLIC_HOLIDAYS = {
     "06-16": "Youth Day",
     "08-09": "National Womens Day",
     "09-24": "Heritage Day",
-    "10-16": "Day of Reconciliation",
+    "12-16": "Day of Reconciliation",
     "12-25": "Christmas Day",
     "12-26": "Day of Goodwill"
 }
